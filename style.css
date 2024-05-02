@@ -1,6 +1,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #232323;
+    background-color: #e6e6e6;
     margin: 0;
     padding: 0;
     display: flex;
@@ -11,6 +11,7 @@ body {
   
   .calculator {
     width: 300px;
+    max-width: 100%;
     border: 2px solid #4a4a4a;
     border-radius: 10px;
     background-color: #f1f1f1;
@@ -32,6 +33,7 @@ body {
   .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     gap: 10px;
     padding: 10px;
   }
@@ -42,16 +44,12 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #6c757d;
-    color: #fff;
+    background-color: #ccc;
+    color: white;
     transition: background-color 0.3s ease;
   }
   
-  .number {
-    background-color: #495057;
-  }
-  
-  .operator, .clear, .calculate {
+  .number, .operator, .clear, .calculate {
     background-color: #007bff;
   }
   
@@ -62,3 +60,13 @@ body {
   .button-text {
     font-weight: bold;
   }
+  
+  .clear, .calculate {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .clear:hover, .calculate:hover {
+    background-color: #0056b3;
+  }
+  
